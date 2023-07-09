@@ -32,10 +32,16 @@ function reverseOnlyLetters(s) {
     }
   }
 
+    //convert array back to a string
   return arr.join('');
 }
 
+//helped function to check if ch is a letter
 function isLetter(ch) {
   let code = ch.charCodeAt(0);
-  return (code >= 65 && code <= 90) || (code >= 97 && code <= 122);
+  return (code >= 65 && code <= 90) //A-Z
+    || (code >= 97 && code <= 122) //a-z
 }
+
+//time: O(n)
+//space: O(n), due to arr
