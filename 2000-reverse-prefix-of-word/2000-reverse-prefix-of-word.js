@@ -28,3 +28,5 @@ var reversePrefix = function(word, ch) {
     // Convert the array back to a string
      return wordArray.join('');
 };
+
+//Runtime: 48 ms, faster than 95.18% of JavaScript online submissions 
