@@ -11,7 +11,10 @@ var minStartValue = function(nums) {
         min=Math.min(min, total)
     }
     
-    startValue= -min+1
+    //sum is never less than 1
+    //min+startValue=1 => startValue = 1-min
+    
+    startValue= 1-min
     return startValue
 };
 
