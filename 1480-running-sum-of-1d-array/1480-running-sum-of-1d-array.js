@@ -3,6 +3,7 @@
  * @return {number[]}
  */
 var runningSum = function(nums) {
+    
     //using prefix sum method:
     
     let result=[nums[0]] 
@@ -12,3 +13,6 @@ var runningSum = function(nums) {
 
    return result
 }
+
+//time: O(n)
+//space: O(1)
