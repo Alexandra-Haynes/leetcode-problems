@@ -2,18 +2,18 @@
  * @param {number[]} nums
  * @return {number}
  */
+
+//using prefix sum method:
+
 var waysToSplitArray = function(nums) {
-    let n = nums.length;
-    
-    let prefix = [nums[0]];
-    for (let i = 1; i < n; i++) {
-        prefix.push(nums[i] + prefix[prefix.length - 1]);
+    let ans = 0, leftSection = 0, total = 0;
+    for (const num of nums) {
+        total += num;
     }
     
-    let ans = 0;
-    for (let i = 0; i < n - 1; i++) {
-        let leftSection = prefix[i];
-        let rightSection = prefix[n - 1] - prefix[i];
+    for (let i = 0; i < nums.length - 1; i++) {
+        leftSection += nums[i];
+        let rightSection = total - leftSection;
         if (leftSection >= rightSection) {
             ans++;
         }
@@ -21,3 +21,5 @@ var waysToSplitArray = function(nums) {
     
     return ans;
 };
+// time: O(n), we can calculate the sums of the left and right sections in O(1)
+//space: O(1)
