@@ -5,25 +5,37 @@
 
  //two pointers:
 
-const regex = /^[a-zA-Z]$/;
-var reverseOnlyLetters = function(s) {
-    let output = '';
-    let cursorS = 0;
-    let cursorReverse = s.length - 1;
+
+function reverseOnlyLetters(s) {
     
-    while (cursorS < s.length) {
-        if (!regex.test(s[cursorReverse]) && cursorReverse >= 0) {
-            cursorReverse--;
-            continue;
-        }
-        if (regex.test(s[cursorS])) {
-            output += s[cursorReverse];
-            cursorReverse--;
-        } else {
-            output += s[cursorS];
-        }
-        cursorS++;
+  let left = 0;
+  let right = s.length - 1;
+    //convert to arr for easier swapping
+  let arr = Array.from(s);
+
+  while (left < right) {
+      //if both letters, swap them
+    if (isLetter(arr[left]) && isLetter(arr[right])) {
+      let temp = arr[left];
+      arr[left] = arr[right];
+      arr[right] = temp;
+      left++;
+      right--;
+    //if one of the ch is not letter, we skip it
+    } else {
+      if (!isLetter(arr[left])) {
+        left++;
+      }
+      if (!isLetter(arr[right])) {
+        right--;
+      }
     }
-    
-    return output;
-};
+  }
+
+  return arr.join('');
+}
+
+function isLetter(ch) {
+  let code = ch.charCodeAt(0);
+  return (code >= 65 && code <= 90) || (code >= 97 && code <= 122);
+}
