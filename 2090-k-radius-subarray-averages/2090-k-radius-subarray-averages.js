@@ -37,3 +37,4 @@ var getAverages = function(nums, k) {
 
 //time: O(n)
 //space: O(n), we used additional array prefix of size n+1
+//sliding window would give better memory
