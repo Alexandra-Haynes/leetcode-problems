@@ -15,3 +15,6 @@ var missingNumber = function(nums) {
 
   return -1 // default return value, if no missing number is found 
 }
+
+//time: O(n)
+//space: O(n)
