@@ -4,7 +4,8 @@
  */
 var pivotIndex = function(nums) {
     
-    //using the prefix sum method:
+    //#1: using the prefix sum method
+    
     const prefix=[0]
     
     //calculate prefix sum
