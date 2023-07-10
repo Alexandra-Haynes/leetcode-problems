@@ -20,6 +20,7 @@ var intersection = function(nums) {
     //add numbers with count equal to n to the result array
   for (const [num, count] of numCount) {
     if (count === n) {
+        //a number appears n times if and only if it appears in all arrays
       result.push(num)
     }
   }
