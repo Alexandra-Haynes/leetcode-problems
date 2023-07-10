@@ -6,19 +6,17 @@ var areOccurrencesEqual = function(s) {
     //approach: because a set ignores duplicates, we can put all the frequencies in a set 
     //and check if the length is 1 to verify if the frequencies are all the same
     
-    //creating the hash map for each character
+    //creating the hash map for each character and its frequency value
     let counts = new Map()
     for (const ch of s) {
         counts.set(ch, (counts.get(ch) || 0) + 1)
     }
     
-    // 
-    
+    // store unique values in a set
     let frequencies = new Set()
     for (const val of counts.values()) {
         frequencies.add(val)
     }
-
     
     //if all frequencies have the same value => set's size will be 1
     return frequencies.size == 1
