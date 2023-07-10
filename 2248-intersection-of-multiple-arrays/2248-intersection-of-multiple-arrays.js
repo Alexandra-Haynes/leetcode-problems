@@ -12,6 +12,8 @@ var intersection = function(nums) {
     for (let j = 0; j < nums[i].length; j++) {
       const num = nums[i][j]
       numCount.set(num, (numCount.get(num) || 0) + 1)
+        //numCount.get(num) retrieves the count of the num from the map
+        //we increment frequency by 1 and set it as the updated count in the map
     }
   }
     
