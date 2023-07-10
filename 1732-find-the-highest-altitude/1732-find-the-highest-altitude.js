@@ -5,7 +5,7 @@
 var largestAltitude = function(gain) {
     
     const n=gain.length
-    const prefix = new Array(n+1).fill(0) 
+    const prefix = [0]
     let max = 0 //highest altitude
     
     for(let i=0; i<n; i++) {
