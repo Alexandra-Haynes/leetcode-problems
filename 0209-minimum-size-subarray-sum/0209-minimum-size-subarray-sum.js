@@ -24,3 +24,6 @@ var minSubArrayLen = function(target, nums) {
 
   return min === Infinity ? 0 : min
 };
+
+//time: O(n)
+//space: O(1)
