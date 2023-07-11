@@ -23,3 +23,8 @@ var largestUniqueNumber = function(nums) {
   return largestUnique 
     
 }
+
+//time complexity:O(n), we iterate through the array twice: once to count the frequency and 
+//                once to find the largest unique number
+//space complexity: O(n), the worst case scenario where all elements in the array 
+//                 are unique and stored in the frequency map.
