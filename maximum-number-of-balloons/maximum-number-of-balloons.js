@@ -4,7 +4,7 @@
  */
 var maxNumberOfBalloons = function(text) {
     
-    const charCount = new Map()
+     const charCount = new Map()
 
   //count the frequency of each character in the given text
   for (const char of text) {
@@ -40,4 +40,5 @@ var maxNumberOfBalloons = function(text) {
   }
 
   return maxInstances
+    
 };
