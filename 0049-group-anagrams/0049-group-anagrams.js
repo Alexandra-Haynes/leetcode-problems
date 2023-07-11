@@ -26,3 +26,8 @@ var groupAnagrams = function(strs) {
     }
     return ans
 };
+
+//time complexity: O(n⋅m⋅logm), where n=length of strs and m=the average length of the strings
+//                  we iterated over each string and sort it, which costs O(n⋅m⋅logm)
+//                  then, we iterated over the keys, worst case scenario:no matching anagrams => n groups => O(n)
+//space complexity: O(n⋅m), each string will be placed in an array within the hash map             
