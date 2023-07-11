@@ -19,8 +19,8 @@ var groupAnagrams = function(strs) {
         groups.get(key).push(s) //add that string in its group
     }
     
+    //add all the groups in a final array
     let ans=[]
-    
     for(const group of groups.values()) {
         ans.push(group)
     }
