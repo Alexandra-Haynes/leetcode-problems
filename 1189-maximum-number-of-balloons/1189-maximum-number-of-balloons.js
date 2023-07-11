@@ -32,8 +32,10 @@ var maxNumberOfBalloons = function(text) {
       
     const instances = Math.floor(charCount.get(char) / count)
     //checks if the word has every ch in 'balloon' at least once
+    
     maxInstances = Math.min(maxInstances, instances) //update the max, if necessary
       //contains the smallest value between the current maxInstances and the calculated instances
+      //for ex: 'b' can appear 3times, but 'o' only once, in this case we only care about 1
   }
 
   return maxInstances
