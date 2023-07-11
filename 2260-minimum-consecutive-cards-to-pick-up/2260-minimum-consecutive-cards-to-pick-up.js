@@ -12,6 +12,7 @@ var minimumCardPickup = function(cards) {
     for (let i = 0; i < cards.length; i++) {
         
         if (dic.has(cards[i])) {
+            //update min if applicable
             ans = Math.min(ans, i - dic.get(cards[i]) + 1) // equivalent of right-left+1 in sliding window
         }
         
