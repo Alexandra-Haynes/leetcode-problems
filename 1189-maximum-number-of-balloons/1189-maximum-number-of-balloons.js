@@ -19,7 +19,9 @@ var maxNumberOfBalloons = function(text) {
     ["n", 1]
   ])
 
-  let maxInstances = Infinity //any subsequent value we find will be smaller than Infinity
+  let maxInstances = Infinity 
+  //maximum number of instances of the word "balloon" that can be formed based on the count of each required character
+  //any subsequent value we find will be smaller than Infinity
 
   //find the maximum count of instances
   for (const [char, count] of balloonChars) {
@@ -31,6 +33,7 @@ var maxNumberOfBalloons = function(text) {
     const instances = Math.floor(charCount.get(char) / count)
     //checks if the word has every ch in 'balloon' at least once
     maxInstances = Math.min(maxInstances, instances) //update the max, if necessary
+      //contains the smallest value between the current maxInstances and the calculated instances
   }
 
   return maxInstances
