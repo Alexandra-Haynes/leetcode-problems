@@ -29,3 +29,8 @@ var numJewelsInStones = function(jewels, stones) {
     
     return jewelsCount
 };
+
+//time complexity: O(n+m), depending on the lengths of our strings
+//                 we iterate over stones and jewels once to                           populate the hash map and count the jewels
+
+//space complexity: O(m), m-number of distinct stones. In the worst                   case, the hash map has to stores the count of                       each type of stones
