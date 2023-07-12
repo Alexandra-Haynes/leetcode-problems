@@ -5,7 +5,9 @@
  */
 var canConstruct = function(ransomNote, magazine) {
     
-    let ransomMap= new Map()
+    //will use hash maps to store all letters and their frequencies
+    
+    let ransomMap = new Map()
     let magazineMap = new Map()
     
     //populate magazine map with each ch and its frequency
@@ -19,7 +21,9 @@ var canConstruct = function(ransomNote, magazine) {
     
     for(let i=0; i< ransomNote.length; i++) {
         const ch = ransomNote[i]
+        
         //if the ch doesn't exist in magazineMap or the count is 0 => return false
+        
         if(!magazineMap.has(ch) || magazineMap.get(ch) === 0) return false
     
         //update the count of ch  in ransomMap
@@ -34,3 +38,7 @@ var canConstruct = function(ransomNote, magazine) {
  
     return true
 };
+
+//time complexity: O(m+n), depending on the length of the two strings. We iterated over both string once to populate the hash maps
+
+//space complexity: O(m+n), in the worst case, all ch are distinct, so both maps will store all the ch
