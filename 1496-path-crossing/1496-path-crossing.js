@@ -5,7 +5,7 @@
 var isPathCrossing = function(path) {
     
     //use a set to keep track of each unique point to arrive at
-    let visited = new Set([0,0])
+    let visited = new Set()
     
     visited.add("0,0")
     
