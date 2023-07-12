@@ -20,5 +20,5 @@ var sumOfUnique = function(nums) {
     return sum
 };
 
-//time complexity: O(n), we iterate through the array twice: once to count the occurrences and once to calculate the sum of unique elements
+//time complexity: O(n), we iterate through the array twice: once to count the occurrences and once to calculate the sum of unique elements. In this case, using an array of fixed size 1001 will improve the runtime - space complexity would be O(1)
 //space complexity: O(n), numCount map stores the count of each number. In the worst case, all elements in nums are distinct and the map would store all the numbers.
