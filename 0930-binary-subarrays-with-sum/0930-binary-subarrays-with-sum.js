@@ -6,8 +6,6 @@
 var numSubarraysWithSum = function(nums, goal) {
   let count = 0
   let sum = 0
-  
-  //using the two pointers method
   let left = 0
   let right = 0
   
@@ -39,3 +37,6 @@ var numSubarraysWithSum = function(nums, goal) {
   
   return count
 }
+
+//time:O(n), we iterate through the array once using the two pointers
+//space: O(1),  constant amount of extra space, regardless of the input size
