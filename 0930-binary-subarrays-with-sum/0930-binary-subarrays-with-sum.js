@@ -9,7 +9,6 @@ var numSubarraysWithSum = function(nums, goal) {
   let left = 0
   let right = 0
   
-  
   while (right < nums.length) {
     sum += nums[right]
     
@@ -19,11 +18,10 @@ var numSubarraysWithSum = function(nums, goal) {
     }
     
     if (sum === goal) {
-      count++
-      
+      count++ 
         
-        //after finding a subarray with a sum equal = goal => check if there are 
-        //any additional contiguous zeros within that subarray
+  //after finding a subarray with a sum equal = goal => check if there are 
+  //any additional contiguous zeros within that subarray
         
       let tempLeft = left
       while (tempLeft < right && nums[tempLeft] === 0) {
@@ -31,7 +29,6 @@ var numSubarraysWithSum = function(nums, goal) {
         tempLeft++
       }
     }
-    
     right++
   }
   
