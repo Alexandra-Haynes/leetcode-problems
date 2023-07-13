@@ -94,4 +94,6 @@ function checkInclusion(s1, s2) {
   return false
 }
 
+Runtime: 70 ms, faster than 91.18% of JavaScript online submissions
+
 */
