@@ -51,3 +51,47 @@ var checkInclusion = function(s1, s2) {
 
 
 //Obs: space complexity could be improved to O(1), using arrays instead of maps,  since the size of the array is constant (26 in this case) and does not depend on the input size
+
+
+
+/*
+
+function checkInclusion(s1, s2) {
+
+  const s1Freq = new Array(26).fill(0)
+  const s2Freq = new Array(26).fill(0)
+  const aCharCode = 'a'.charCodeAt(0)
+  let matched = 0
+
+ 
+  for (let i = 0; i < s1.length; i++) {
+    const charIndex = s1.charCodeAt(i) - aCharCode
+    s1Freq[charIndex]++
+  }
+
+  for (let right = 0; right < s2.length; right++) {
+    const charIndex = s2.charCodeAt(right) - aCharCode;
+    s2Freq[charIndex]++
+
+    if (s2Freq[charIndex] <= s1Freq[charIndex]) {
+      matched++
+    }
+
+    if (right >= s1.length) {
+      const leftCharIndex = s2.charCodeAt(right - s1.length) - aCharCode;
+      s2Freq[leftCharIndex]--
+
+      if (s2Freq[leftCharIndex] < s1Freq[leftCharIndex]) {
+        matched--
+      }
+    }
+
+    if (matched === s1.length) {
+      return true
+    }
+  }
+
+  return false
+}
+
+*/
