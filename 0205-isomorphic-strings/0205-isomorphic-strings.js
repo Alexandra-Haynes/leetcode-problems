@@ -35,3 +35,11 @@ var isIsomorphic = function(s, t) {
     
     return true
 };
+
+
+/*
+time complexity: O(n), we iterate through s and t once, checking if ch exists and adding to the map takes O(1)
+space complexity: O(n), the worst-case scenario: every character in s and t is unique => 
+both sMap and tMap will contain all the characters from s and t
+
+*/
