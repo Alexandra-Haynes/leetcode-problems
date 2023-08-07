@@ -41,6 +41,8 @@ var wordPattern = function(pattern, s) {
 };
 
 /*
+
+OBS: just checking  if(patternMap[ch]) returns wrong answer is the word 'constructor' exists in string => needed to use patternMap.hasOwnProperty(ch) to avoid it
 time complexity: O(n)
 space complexity: O(n), the worst case: each ch in pattern and each word in s are unique => maps have size of n
 
