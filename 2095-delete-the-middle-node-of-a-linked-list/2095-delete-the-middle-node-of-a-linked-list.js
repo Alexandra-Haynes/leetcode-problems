@@ -27,7 +27,7 @@ var deleteMiddle = function(head) {
     
      // remove the slow pointer (middle node):
     if (prev) {
-        prev.next = slow.next;
+        prev.next = slow.next
     }
     
     return head
