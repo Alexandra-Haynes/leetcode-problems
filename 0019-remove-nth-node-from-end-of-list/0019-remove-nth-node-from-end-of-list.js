@@ -27,7 +27,7 @@ var removeNthFromEnd = function(head, n) {
     while (fast) {
         fast = fast.next
         slow = slow.next
-    }
+    } //now the distance between slow and fast =n
 
     // remove the nth node from the end
     slow.next = slow.next.next
